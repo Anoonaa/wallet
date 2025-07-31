@@ -1,37 +1,15 @@
 ---
-title: "Enable or disable pages for your portfolio"
-summary: "Magic Portfolio's RouteGuard component takes care of conditionally rendering pages based on your settings."
+title: "Managing Your Bantu-Sphere Wallet Security Settings"
+summary: "Learn how to configure and manage your wallet's security features to keep your funds safe and secure."
 publishedAt: "2025-04-22"
-tag: "Magic Portfolio"
+tag: "Security"
 ---
 
-## Enable or disable pages
+## Security Settings Overview
 
-Magic Portfolio's `RouteGuard` component takes care of conditionally rendering pages based on the `routes` object in the `resources/config.js` file.
+## Security Settings Overview
 
-<CodeBlock
-    marginBottom="16"
-    highlight="6"
-    codes={[
-  {
-    code:
-`const routes = {
-    '/':        true,
-    '/about':   true,
-    '/work':    true,
-    '/blog':    true,
-    '/gallery': false,
-};`,
-    language: "tsx",
-    label: "src/app/resources/config.js"
-  }
-]} />
-
-The code above will ensure that the `/gallery` page is not accessible and is not displayed in the navigation.
-
-## Add new pages
-
-When creating a new page, it needs to be added to the `routes` object in the `resources/config.js` file.
+Your Bantu-Sphere wallet includes comprehensive security settings that help protect your digital assets. Understanding and properly configuring these settings is essential for maintaining the security of your funds.
 
 <CodeBlock
     marginBottom="16"
@@ -39,17 +17,41 @@ When creating a new page, it needs to be added to the `routes` object in the `re
     codes={[
   {
     code:
-`const routes = {
-    '/':        true,
-    '/about':   true,
-    '/work':    true,
-    '/blog':    true,
-    '/gallery': false,
-    '/music': true,
+`const securitySettings = {
+    'biometric':        true,
+    'twoFactor':        true,
+    'smsAlerts':        true,
+    'emailAlerts':      true,
+    'transactionPin':   false,
 };`,
     language: "tsx",
-    label: "src/app/resources/config.js"
+    label: "Wallet Security Configuration"
   }
 ]} />
 
-The code above will ensure that the `/music` page is accessible. Users will be able to navigate to it after adding it to the navigation menu in the `components/Header.tsx` file.
+The settings above show how to enable or disable various security features in your Bantu-Sphere wallet. Setting `transactionPin` to false means PIN verification is disabled for transactions.
+
+## Enabling Additional Security Features
+
+When adding new security measures to your wallet, they need to be configured in your security settings.
+
+<CodeBlock
+    marginBottom="16"
+    highlight="6"
+    codes={[
+  {
+    code:
+`const securitySettings = {
+    'biometric':        true,
+    'twoFactor':        true,
+    'smsAlerts':        true,
+    'emailAlerts':      true,
+    'transactionPin':   false,
+    'deviceTrust':      true,
+};`,
+    language: "tsx",
+    label: "Enhanced Security Configuration"
+  }
+]} />
+
+The configuration above adds device trust verification to your security settings. This ensures that only trusted devices can access your wallet, providing an additional layer of protection for your funds.

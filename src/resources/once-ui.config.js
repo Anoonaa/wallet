@@ -1,14 +1,18 @@
 import { home } from "./content";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL = "https://demo.magic-portfolio.com";
+const baseURL = "https://wallet.bantu-sphere.com";
 
 const routes = {
   "/": true,
+  "/dashboard": true,
+  "/send": true,
+  "/receive": true,
+  "/history": true,
+  "/profile": true,
   "/about": true,
-  "/work": true,
   "/blog": true,
-  "/gallery": true,
+  "/work": true,
 };
 
 const display = {
@@ -20,7 +24,7 @@ const display = {
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
 const protectedRoutes = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+  "/work/bantu-sphere-mobile-wallet-app-development": true,
 };
 
 // Import and set font for each variant
@@ -175,9 +179,9 @@ const mailchimp = {
 const schema = {
   logo: "",
   type: "Organization",
-  name: "Once UI",
+  name: "Bantu-Sphere",
   description: home.description,
-  email: "lorant@once-ui.com",
+  email: "support@bantu-sphere.com",
 };
 
 // social links

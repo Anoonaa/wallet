@@ -24,14 +24,14 @@ export const Footer = () => {
       >
         <Text variant="body-default-s" onBackground="neutral-strong">
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
-          <Text paddingX="4">{person.name}</Text>
+          <Text paddingX="4">Bantu-Sphere Wallet</Text>
           <Text onBackground="neutral-weak">
             {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
-            / Build your portfolio with{" "}
+            / Powered by{" "}
             <SmartLink
-              href="https://once-ui.com/products/magic-portfolio"
+              href="https://bantu-sphere.com"
             >
-              Once UI
+              Bantu-Sphere
             </SmartLink>
           </Text>
         </Text>

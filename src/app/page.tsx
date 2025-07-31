@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row, Meta, Schema } from "@once-ui-system/core";
-import { home, about, person, newsletter, baseURL, routes } from "@/resources";
+import { home, dashboard, person, newsletter, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
@@ -18,7 +18,7 @@ export default function Home() {
         image={`/api/og/generate?title=${encodeURIComponent(home.title)}`}
         author={{
           name: person.name,
-          url: `${baseURL}${about.path}`,
+          url: `${baseURL}${dashboard.path}`,
           image: `${baseURL}${person.avatar}`,
         }}
       />
@@ -44,24 +44,22 @@ export default function Home() {
           </RevealFx>
           <RevealFx paddingTop="12" delay={0.4} horizontal="start" paddingLeft="12">
             <Button
-              id="about"
+              id="dashboard"
               data-border="rounded"
-              href={about.path}
+              href={dashboard.path}
               variant="secondary"
               size="m"
               weight="default"
               arrowIcon
             >
               <Flex gap="8" vertical="center" paddingRight="4">
-                {about.avatar.display && (
-                  <Avatar
-                    marginRight="8"
-                    style={{ marginLeft: "-0.75rem" }}
-                    src={person.avatar}
-                    size="m"
-                  />
-                )}
-                {about.title}
+                <Avatar
+                  marginRight="8"
+                  style={{ marginLeft: "-0.75rem" }}
+                  src={person.avatar}
+                  size="m"
+                />
+                Go to Dashboard
               </Flex>
             </Button>
           </RevealFx>
@@ -71,10 +69,10 @@ export default function Home() {
         <Projects range={[1, 1]} />
       </RevealFx>
       {routes["/blog"] && (
-        <Flex fillWidth gap="24" mobileDirection="column">
+        <Flex fillWidth gap="24" direction="column">
           <Flex flex={1} paddingLeft="l" paddingTop="24">
             <Heading as="h2" variant="display-strong-xs" wrap="balance">
-              Latest from the blog
+              Latest Updates
             </Heading>
           </Flex>
           <Flex flex={3} paddingX="20">

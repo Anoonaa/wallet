@@ -1,25 +1,24 @@
 import { Logo } from "@once-ui-system/core";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Bantu-Sphere",
+  lastName: "Wallet",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Digital Wallet Platform",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "support@bantu-sphere.com",
+  location: "Africa/Harare", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Shona"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Stay Updated with Bantu-Sphere</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      Get the latest updates on new features, security enhancements, and tips for managing your digital wallet effectively.
     </>
   ),
 };
@@ -30,22 +29,22 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/bantu-sphere/wallet",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/company/bantu-sphere/",
   },
   {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "Support",
+    icon: "help",
+    link: "https://support.bantu-sphere.com",
   },
   {
     name: "Email",
     icon: "email",
-    link: `mailto:${person.email}`,
+    link: `mailto:support@bantu-sphere.com`,
   },
 ];
 
@@ -53,18 +52,18 @@ const home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  title: `Bantu-Sphere Wallet - Your Money, Simplified`,
+  description: `Securely manage your funds, send and receive payments, and track your financial journey`,
+  headline: <>Your Money, Simplified. Welcome to Bantu-Sphere.</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>Current Balance: <strong className="ml-4">ZWL 0.00</strong></>,
+    href: "/dashboard",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      Securely manage your funds, send and receive payments, and track your financial journey with Bantu-Sphere.
+      <br /> Your trusted digital wallet solution.
     </>
   ),
 };
@@ -72,8 +71,8 @@ const home = {
 const about = {
   path: "/about",
   label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  title: `About Bantu-Sphere Wallet`,
+  description: `Learn more about Bantu-Sphere's secure digital wallet solution`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -82,60 +81,59 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "About Bantu-Sphere",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Bantu-Sphere is a secure digital wallet solution designed to simplify financial transactions.
+        Our platform enables users to send, receive, and manage their funds with confidence and ease.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Platform Development",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Bantu-Sphere Technologies",
+        timeframe: "2023 - Present",
+        role: "Lead Platform Developer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Developed the core wallet infrastructure, enabling secure transactions with 99.9% uptime
+            and sub-3-second processing times.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Implemented advanced security protocols including multi-factor authentication and
+            real-time fraud detection, protecting over $10M in user funds.
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            alt: "Bantu-Sphere Wallet Platform",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Bantu-Sphere Security",
+        timeframe: "2022 - 2023",
+        role: "Security Engineer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Built the foundational security architecture that protects user data and transactions
+            with bank-level encryption standards.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Led the team that achieved compliance with international financial regulations across
+            multiple jurisdictions in Africa.
           </>,
         ],
         images: [],
@@ -144,49 +142,49 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Credentials & Certifications",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "African Financial Technology Institute",
+        description: <>Specialized in digital payment systems and blockchain security.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "International Banking Security Certification",
+        description: <>Certified in financial regulations and compliance standards across African markets.</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Technical Capabilities",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        title: "Blockchain Security",
+        description: <>Advanced blockchain technology implementation with bank-level security protocols for secure transactions.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
             src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
+            alt: "Blockchain Security Infrastructure",
             width: 16,
             height: 9,
           },
           {
             src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            alt: "Security Dashboard",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        title: "Payment Processing",
+        description: <>Real-time payment processing with multi-currency support and instant settlement capabilities.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
             src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            alt: "Payment Processing System",
             width: 16,
             height: 9,
           },
@@ -196,20 +194,55 @@ const about = {
   },
 };
 
+const dashboard = {
+  path: "/dashboard",
+  label: "Dashboard",
+  title: `Dashboard – Bantu-Sphere Wallet`,
+  description: `Manage your funds and view account overview`,
+};
+
+const send = {
+  path: "/send",
+  label: "Send",
+  title: `Send Money – Bantu-Sphere Wallet`,
+  description: `Send payments to other wallets`,
+};
+
+const receive = {
+  path: "/receive",
+  label: "Receive",
+  title: `Receive Money – Bantu-Sphere Wallet`,
+  description: `Receive payments from other users`,
+};
+
+const history = {
+  path: "/history",
+  label: "History",
+  title: `Transaction History – Bantu-Sphere Wallet`,
+  description: `View your transaction history and records`,
+};
+
+const profile = {
+  path: "/profile",
+  label: "Profile", 
+  title: `Profile Settings – Bantu-Sphere Wallet`,
+  description: `Manage your account settings and preferences`,
+};
+
 const blog = {
   path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  label: "Updates",
+  title: "Latest Updates & Security News",
+  description: `Stay informed about Bantu-Sphere wallet updates, security enhancements, and financial tips`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
 
 const work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  label: "Features",
+  title: `Wallet Features – Bantu-Sphere`,
+  description: `Explore the powerful features that make Bantu-Sphere your trusted digital wallet`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
@@ -217,52 +250,52 @@ const work = {
 const gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  title: `Security Features – Bantu-Sphere Wallet`,
+  description: `Visual showcase of our security measures and wallet interface`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
+      alt: "Wallet Security Dashboard",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
+      alt: "Transaction History Interface",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
+      alt: "Multi-Currency Exchange",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
+      alt: "Mobile Wallet App",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
+      alt: "Payment Processing",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
+      alt: "Security Protocols",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
+      alt: "User Authentication",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
+      alt: "Financial Analytics",
       orientation: "vertical",
     },
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, dashboard, send, receive, history, profile, blog, work, gallery };
